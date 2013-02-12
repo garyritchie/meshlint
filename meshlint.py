@@ -19,7 +19,7 @@ bl_info = {
     "name": "MeshLint: Like Spell-checking for your Meshes",
     "author": "rking",
     "version": (1, 0),
-    "blender": (2, 6, 3),
+    "blender": (2, 6, 5),
     "location": "Object Data properties > MeshLint",
     "description": "Check objects for: Tris / Ngons / Nonmanifoldness / etc",
     "warning": "",

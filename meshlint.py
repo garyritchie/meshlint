@@ -192,14 +192,17 @@ try:
         def select_indices(self, elemtype, indices):
             for i in indices:
                 if 'verts' == elemtype:
+                    self.verts.ensure_lookup_table() # Quick fix for blender 2.77
                     self.select_vert(i)
                 elif 'edges' == elemtype:
+                    self.edges.ensure_lookup_table()# Quick fix for blender 2.77
                     self.select_edge(i)
                 elif 'faces' == elemtype:
+                    self.faces.ensure_lookup_table()# Quick fix for blender 2.77
                     self.select_face(i)
                 else:
                     print("MeshLint says: Huh?? → elemtype of %s." % elemtype)
-        
+
         def select_vert(self, index):
             self.b.verts[index].select = True
 
@@ -411,7 +414,7 @@ try:
                 elif 'EDIT_MESH' != original_mode:
                     ensure_not_edit_mode()
             return {'FINISHED'}
-        
+
         def handle_troubled_meshes(self):
             pass
 
@@ -467,7 +470,7 @@ try:
                 play_pause = 'PLAY'
             right.operator(
                 'meshlint.live_toggle', text=live_label, icon=play_pause)
-            
+
             layout.split().operator(
                 'meshlint.objects_deselect',
                 text='Deselect all Lint-free Objects',

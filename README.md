@@ -1,3 +1,5 @@
+Quick fix for Blender 2.77( added ensure_lookup_table() )
+
 ![MeshLint Logo](img/logo-suzanne.png "The default Monkey
 has 32 Tris, 42 Nonmanifold Elements, and 9 6+-Edge Poles.")
 
@@ -110,7 +112,7 @@ The Name
 It comes from programming tools that do similar things, but for code
 ([Wikipedia Link](http://en.wikipedia.org/wiki/Lint\_(software\))). If you
 program, you might want to Google about and see if such a thing exists for
-your language. 
+your language.
 
 Going Further
 -------------

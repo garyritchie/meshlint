@@ -192,13 +192,13 @@ try:
         def select_indices(self, elemtype, indices):
             for i in indices:
                 if 'verts' == elemtype:
-                    self.verts.ensure_lookup_table() # Quick fix for blender 2.77
+                    self.b.verts.ensure_lookup_table() # Quick fix for blender 2.77
                     self.select_vert(i)
                 elif 'edges' == elemtype:
-                    self.edges.ensure_lookup_table()# Quick fix for blender 2.77
+                    self.b.edges.ensure_lookup_table()# Quick fix for blender 2.77
                     self.select_edge(i)
                 elif 'faces' == elemtype:
-                    self.faces.ensure_lookup_table()# Quick fix for blender 2.77
+                    self.b.faces.ensure_lookup_table()# Quick fix for blender 2.77
                     self.select_face(i)
                 else:
                     print("MeshLint says: Huh?? → elemtype of %s." % elemtype)
